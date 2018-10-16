@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+@import '~scss/_mixins';
+
+@mixin btn-color($bg-color, $color, $border-color: none) {
+	background-color: $bg-color;
+	border: none;
+	@if($border-color != none){
+	    @include m-r1b($border-color, px(12));
+	}
+	color: $color;
+}
+
+@mixin btn-size($height, $size, $border-radius: 4px) {
+	height: $height;
+	line-height: $height;
+	font-size: $size;
+	border-radius: $border-radius;
+}
+
+.lm-btn{
+	display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 10px;
+
+    @include btn-size(44px, 16px);
+	@include btn-color(#FF552E, #FFF);
+
+    border: 0;
+    background-color: #FF552E;
+    color: #fff;
+
+    text-align: center;
+    outline: 0;
+    -webkit-appearance: none;
+
+	&[disabled] , &.disabled {
+	    pointer-events: none !important;
+	    background-color: #EBEBF0 !important;
+	    color: #D2D2D2 !important;
+	    border: 0 !important;
+	}
+
+    &:active {
+        background-color: #D8D8D8;
+        border-color: #D8D8D8;
+    }
+
+	&-orange-white {
+		@include btn-color(#FF552E, #FFF);
+        &:active {
+            background-color: #FF881A;
+        }
+	}
+
+	&-white-blue {
+		@include btn-color(#FFF, #37ACF4, #E6E6E6);
+	}
+
+	&-white-grey {
+		@include btn-color(#FFF, #666, #E6E6E6);
+	}
+
+	&-white-blue, &-white-grey {
+		&:active {
+            border-color: #D8D8D8;
+            background-color: #D8D8D8;
+        }
+	}
+
+	&-blue-white {
+		@include btn-color(#0AE, #FFF);
+		&:active {
+            color: #FFF;
+            background-color: #0091CB;
+        }
+	}
+
+	&-normal {
+		@include btn-size(44px, 16px);
+	}
+
+	&-tiny {
+		@include btn-size(24px, 12px, 3px);
+    }
+
+    &-small {
+    	@include btn-size(36px, 13px, 3px);
+    }
+
+    &-fixed {
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		border-radius: 0;
+		border-width: 1px 0 0 0;
+	}
+}
+
