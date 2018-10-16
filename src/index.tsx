@@ -27,7 +27,7 @@ const defaultProps: ButtonProps = {
     content: 'React test Button',
     className: '',
     customClass: '',
-    handle: () => {console.log('handle action');},
+    handle: () => { console.log('handle action'); },
     size: '',
     type: 'normal',
     position: '',

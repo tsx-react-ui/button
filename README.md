@@ -1,23 +1,22 @@
-# button
+# @tsx-react-ui/button
 
 * 作者：maqing01
 * 邮箱：475986855@qq.com
 
 ## 介绍
 
-_tsx-react button_
+_The button component of the react written in Typescript_
 
 ---
 
 ## 安装
 
-`tsx-*` 组件使用 `npm` 进行管理，命名空间统一为 `tsx-`，请使用以下命令进行组件安装。
+组件使用 `npm` 进行管理，请使用以下命令进行组件安装：
 
 ```
-npm i tsx-button --save
+npm i @tsx-react-ui/button --save
 ```
 
-- 如果你还没有安装 `npm`，可通过以下方式进行 [安装](https://nodejs.org/en/download/)。
 - 安装cnpm `npm install -g cnpm --registry=https://registry.npm.taobao.org`
 
 ---
@@ -71,7 +70,7 @@ npm publish
 
 ## 相关资料
 
-* [tsx 组件开发规范](http://)
+* [@tsx-react-ui/组件开发规范](http://)
 
 ---
 

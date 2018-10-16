@@ -4,7 +4,7 @@ import './index.scss'
 
 export default class App extends Component {
 
-    constructor(args, context){
+    constructor(args, context) {
         super(args);
 
         this.state = {
