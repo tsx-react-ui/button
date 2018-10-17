@@ -10,27 +10,29 @@ import classNames from 'classnames';
 
 import './index.scss';
 
+type Sizes = 'normal' | 'tiny' | 'small';
+type Types = 'blue-white' | 'white-blue' | 'white-grey';
+type Positions = 'fixed' | undefined;
+
 interface ButtonProps {
-    content: string;
+    content?: string;
     className?: string;
     customClass?: string;
     handle?: ReactEventHandler<HTMLButtonElement>;
-    size?: string;
-    type?: string;
-    position?: string;
+    size?: Sizes;
+    type?: Types;
+    position?: Positions;
     disabled: boolean;
     children?: JSX.Element;
     href?: string;
 }
 
 const defaultProps: ButtonProps = {
-    content: 'React test Button',
     className: '',
     customClass: '',
     handle: () => { console.log('handle action'); },
-    size: '',
-    type: 'normal',
-    position: '',
+    size: 'normal',
+    type: 'blue-white',
     disabled: false,
     href: ''
 };
@@ -52,7 +54,7 @@ const Button: React.SFC<ButtonProps> = ({
     // disabled === 'false' ? false : disabled;
 
     const template = href ?
-        <a className={defaultClass} href={href} data-disabled={disabled} {...others} >
+        <a className={defaultClass} href={href} {...others} >
             {children ? content : content || '提交'} {children}
         </a>
         :

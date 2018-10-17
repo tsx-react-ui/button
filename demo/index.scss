@@ -1,1 +1,16 @@
-@import '~scss/_mixins';
+// @import '~scss/_mixins';
+.container {
+	padding: 0 8px;
+
+	.warn {
+		background-color: yellow;
+		color: red;
+		&:active {
+			border-color: #D8D8D8;
+            background-color: #D8D8D8;
+		}
+	}
+	.black {
+		color: #000;
+	}
+}

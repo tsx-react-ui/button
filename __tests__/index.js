@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../src';
+import Button from '../dist';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import sinon from 'sinon';
@@ -22,7 +22,7 @@ describe('Test Button', () => {
         const wrapper = shallow(component);
         const wrapperClass = wrapper.find('div');
 
-        expect(wrapperClass.length >= 1);
+        expect(wrapperClass.length >= 1).toBe(false);
 
     })
 

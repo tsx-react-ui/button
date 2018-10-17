@@ -29,19 +29,30 @@ npm i @tsx-react-ui/button --save
 
 ### 使用
 最少配置参数为：
-- 传入`content`增加内容
-
+```jsx
+<Button />
 ```
-<Button content="React test app" styles="custom-style" handle={() => console.log("React test app")} />
-
+配置参数实现带有子元素的吸底按钮使用方式为：
+```jsx
+<Button
+    type="blue-white"
+    position="fixed"
+    handle={() => console.log('被触发！')} >
+    <a style={{display: "block", width: "100%", height: "100%"}} href="/">去首页</a>
+</Button>
 ```
 ### 配置参数
 
 | Prop | Type | Default | Description |
 | ---- |:----:|:-------:| :----------:|
-| **`content`** | `string` | `undefined` | 主要内容 |
+| **`content`** | `string` | `undefined` | 按钮内容 |
+| **`type`** | `string` | `undefined` | 按钮类型（颜色） |
+| **`size`** | `string` | `undefined` | 按钮大小 |
+| **`position`** | `string` | `undefined` | 按钮位置（正常文档流内还是吸底） |
+| **`className`** | `string` | `undefined` | 按钮自定义样式 |
+| **`disabled`** | `string/boolean` | `false` | 按钮是否可点击 |
+| **`href`** | `string` | `undefined` | 按钮点击后的跳转链接 |
 | **`handle`** | `func` | `undefined` | 点击触发事件 |
-| **`styles`** | `string` | `undefined` | 自定义className |
 
 ---
 
